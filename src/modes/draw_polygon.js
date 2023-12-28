@@ -71,6 +71,7 @@ DrawPolygon.onStop = function(state) {
   this.updateUIClasses({ mouse: Constants.cursors.NONE });
   doubleClickZoom.enable(this);
   this.activateUIButton();
+  this?._ctx?.api?.setActiveButton();
 
   // check to see if we've deleted this feature
   if (this.getFeature(state.polygon.id) === undefined) return;

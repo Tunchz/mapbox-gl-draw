@@ -42,6 +42,7 @@ DrawPoint.onTap = DrawPoint.onClick = function(state, e) {
 
 DrawPoint.onStop = function(state) {
   this.activateUIButton();
+  this?._ctx?.api?.setActiveButton();
   if (!state.point.getCoordinate().length) {
     this.deleteFeature([state.point.id], { silent: true });
   }
