@@ -111,7 +111,7 @@ DrawLineString.onKeyUp = function(state, e) {
 DrawLineString.onStop = function(state) {
   doubleClickZoom.enable(this);
   this.activateUIButton();
-  this?._ctx?.api?.setActiveButton();
+  this._ctx.api.setActiveButton();
 
   // check to see if we've deleted this feature
   if (this.getFeature(state.line.id) === undefined) return;
